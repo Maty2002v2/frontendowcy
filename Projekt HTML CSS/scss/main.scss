@@ -1,0 +1,82 @@
+@use "variables" as v;
+
+body {
+  margin: 0;
+  padding: 0;
+  //   background-color: v.$main-color;
+}
+
+#video-section {
+  background-color: v.$main-color;
+  text-align: center;
+
+  .wrapper {
+    position: relative;
+    width: fit-content;
+    padding-top: 100px;
+    margin: 0 auto;
+  }
+
+  h1 {
+    position: absolute;
+    top: 50px;
+    left: 10px;
+    z-index: 2;
+
+    margin-top: 0px;
+    color: v.$video-section-font-color;
+    font-weight: bold;
+    text-align: left;
+    font-size: 50px;
+    line-height: 40px;
+  }
+
+  img {
+    width: 960px;
+    height: 524px;
+    object-fit: cover;
+    clip-path: polygon(150px 0, 100% 0, 100% 100%, 0% 100%, 0% 200px);
+  }
+
+  p {
+    color: v.$video-section-font-color;
+  }
+}
+
+#team-section {
+  max-width: 1000px;
+  margin: 0 auto;
+
+  h2 {
+    color: v.$main-color;
+    font-weight: bold;
+  }
+
+  .main-persons {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+  }
+
+  .main-person-image {
+    width: 460px;
+    height: 460px;
+  }
+
+  .main-person-fullname,
+  .other-person-fullname {
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  .other-persons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .other-person-image {
+    width: 300px;
+    height: 300px;
+  }
+}
