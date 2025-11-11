@@ -103,3 +103,41 @@
 
 // const wynik = 15 + 10 + "10";
 // console.log(typeof wynik, wynik);
+
+// Wejście -> "Jesteśmy z każdym dniem coraz gorsi w programowanie"
+// let text = "Jesteśmy z każdym dniem coraz gorsi w programowanie";
+
+// ...
+
+// console.log(text)
+// Wyjście -> "Jesteśmy z KAŻDYM DNIEM coraz lepsi w programowanie!"
+
+// const txt = "Jesteśmy z każdym dniem coraz gorsi w programowanie";
+// console.log(txt.replace("Jesteśmy z każdym dniem coraz gorsi w programowanie", "Jesteśmy z KAŻDYM DNIEM coraz lepsi w programowanie!"));
+
+// let zdanie = "Jesteśmy z każdym dniem coraz gorsi w programowanie";
+// zdanie = zdanie.replace("gorsi", "lepsi");
+// zdanie = zdanie.replace("każdym", "KAŻDYM").replace("dniem", "DNIEM");
+// zdanie = zdanie + "!";
+// console.log(zdanie);
+
+// let text = "Jesteśmy z każdym dniem coraz gorsi w programowanie";
+// text = text.replace("gorsi", "lepsi");
+// text = text.replace("każdym dniem", "KAŻDYM DNIEM");
+// console.log(text + "!");
+
+// let text = "Jesteśmy z każdym dniem coraz gorsi w programowanie";
+// console.log(text.replace("gorsi", "lepsi").replace("z każdym dniem", "Z KAŻDYM DNIEM").concat("!")),
+
+// let tekst = "Jesteśmy z każdym dniem coraz gorsi w programowanie";
+// console.log(tekst.replace("Jesteśmy z każdym dniem coraz gorsi w programowanie", "Jesteśmy z KAŻDYM DNIEM coraz lepsi w programowanie!"))
+
+// alert("Witaj na naszej stronie");
+// const odpowiedz = confirm("Witaj na naszej stronie");
+// console.log(odpowiedz);
+
+// const odpowiedz = prompt("Pytanie");
+// console.log(odpowiedz);
+
+// prompt("Ile punktów dodajemy");
+// let wynik = 10;
