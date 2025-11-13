@@ -317,3 +317,5 @@
 // dodaj do tablicy i na początku i na końcu po nowej osobie,
 // napisz logikę która od filtruje niepełnoletnie osoby,
 // napisz logikę która znajdzie pierwszą kobiete (napisy też są tablicąm jeśli mamy zmienną const imie = "ala" to możemy się odnieść imie[index], więc można sprawdzić czy ostatnia literka to a)
+
+// jakieś zmiany
