@@ -316,4 +316,47 @@
 // niech kazdy obiekt ma klucz imie, nazwisko, wiek,
 // dodaj do tablicy i na początku i na końcu po nowej osobie,
 // napisz logikę która od filtruje niepełnoletnie osoby,
-// napisz logikę która znajdzie pierwszą kobiete (napisy też są tablicąm jeśli mamy zmienną const imie = "ala" to możemy się odnieść imie[index], więc można sprawdzić czy ostatnia literka to a)
+// napisz logikę która znajdzie pierwszą kobiete (napisy też są tablicami jeśli mamy zmienną const imie = "ala" to możemy się odnieść imie[index], więc można sprawdzić czy ostatnia literka to a)
+
+// const osoby = [
+//   { imie: "Jakub", nazwisko: "Moder", wiek: 26 },
+//   { imie: "Jan", nazwisko: "Bednarek", wiek: 29 },
+//   { imie: "Paulina", nazwisko: "Tomasik", wiek: 17 },
+//   { imie: "Krzysztof", nazwisko: "Piątek", wiek: 30 },
+//   { imie: "Oscar", nazwisko: "Pietuszewski", wiek: 17 },
+// ];
+
+// console.log(osoby);
+
+// osoby.unshift({ imie: "Natalia", nazwisko: "Padilla", wiek: 17 });
+// console.log(osoby);
+
+// osoby.push({ imie: "Ewa", nazwisko: "Pajor", wiek: 28 });
+// console.log(osoby);
+
+// const ovr18 = osoby.filter((osoba) => {
+//   const wiek = osoba.wiek;
+//   return wiek >= 18;
+// });
+
+// console.log(ovr18);
+
+// const imiona00 = ovr18.map((osoba) => osoba.imie);
+// console.log("Pelnoletnie osoby z całej listy to: " + imiona00 + ".");
+
+// console.log("Lista pełoletnich osób: ", ovr18);
+
+// const pierwszaKobieta = osoby.find((osoba) => {
+//   const imie = osoba.imie;
+//   return imie[imie.length - 1] == "a";
+// });
+
+// console.log(
+//   "Pierwsza kobieta w całej liście to: " + pierwszaKobieta.imie + "."
+// );
+// console.log("Lista osoób: ", osoby);
+
+// const pierwszaKobieta2 = osoby.find((osoba) => osoba.imie.endsWith("a"));
+// console.log(pierwszaKobieta2);
+
+// console.log("Pierwsza kobieta z tabeli to: " + pierwszaKobieta2.imie + ".");
