@@ -47,4 +47,4 @@ const message = "Hello JavaScript World";
 1.  **Policz liczbę słów.**
 2.  **Zamień każde słowo na wielkie litery.**
 3.  **Wypisz literę o indeksie 6.**
-4.  **Odwróć kolejność słów.**
+4.  **Odwróć kolejność słów. (bez reverse, ale można używać pętli, ifów, tablic itp ;D)**

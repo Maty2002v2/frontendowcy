@@ -1,4 +1,4 @@
-// "use strict";
+"use strict";
 
 // template literal
 // const imie = "Marek";
@@ -81,3 +81,239 @@
 // oblicz(2, 6, "odejmowanie") -> -4
 // oblicz(2, 6, "mnożenie") -> 12
 // oblicz(2, 6, "dzielenie") -> 0.33333333333
+
+// function oblicz1(liczba1, liczba2, dzialanie) {
+//   liczba1 = Number(liczba1);
+//   liczba2 = Number(liczba2);
+
+//   if (isNaN(liczba1 || liczba2)) {
+//     return "Nie wpisałeś liczb, spróbuj raz jeszcze aby wykonac działanie.";
+//   }
+
+//   if (isNaN(liczba1)) {
+//     return "W pierwszym polu nie wpisałeś liczby, spróbuj raz jeszcze aby wykonac działanie.";
+//   }
+
+//   if (isNaN(liczba2)) {
+//     return "W drugim polu nie wpisałeś liczby, spróbuj raz jeszcze aby wykonac działanie.";
+//   }
+
+//   if (dzialanie === "+") {
+//     return (
+//       `Wynik dodawania liczb ${liczba1} i ${liczba2} to: ` + (liczba1 + liczba2)
+//     );
+//   } else if (dzialanie === "-") {
+//     return (
+//       `Wynik odejmowania liczb ${liczba1} i ${liczba2} to: ` +
+//       (liczba1 - liczba2)
+//     );
+//   } else if (dzialanie === "*") {
+//     return (
+//       `Wynik mnożenia liczb ${liczba1} i ${liczba2} to: ` + liczba1 * liczba2
+//     );
+//   } else if (dzialanie === "/") {
+//     return (
+//       `Wynik dzielenia liczb ${liczba1} i ${liczba2} to: ` + liczba1 / liczba2
+//     );
+//   } else {
+//     return "Wybrano niepoprawny symbol działania, zacznij raz jeszcze.";
+//   }
+// }
+
+// let liczba1 = prompt("Podaj pierwszą liczbę:");
+
+// // console.log(liczba1);
+
+// let liczba2 = prompt("Podaj drugą liczbę:");
+
+// // console.log(liczba2);
+
+// let dzialanie = prompt(
+//   `Jakie działanie chcesz wykonać? \n Dodawanie wpisz: + \n Odejmowanie wpisz: - \n Mnożenie wpisz: * \n Dzielenie wpisz: /`
+// );
+
+// // console.log(dzialanie);
+
+// console.log(`Hej! ${oblicz(liczba1, liczba2, dzialanie)}`);
+
+// const l1 = Number(prompt("Podaj pierwszą liczbę"));
+
+// const l2 = Number(prompt("Podaj drugą liczbę"));
+
+// const dzial = prompt("Jakie działanie mam wykonać na tych liczbach: + - / *?");
+
+// function oblicz2(l1, l2, dzial) {
+//   if (isNaN(l1) || isNaN(l2)) {
+//     return "Nie mogę podać wyniku. To nie są liczby.";
+//   }
+
+//   if (dzial === "+") {
+//     wynik = l1 + l2;
+//   } else if (dzial === "-") {
+//     wynik = l1 - l2;
+//   } else if (dzial === "/") {
+//     if (l2 === 0) {
+//       return "Nie mogę podać wyniku. Nie można dzielić przez zero.";
+//     }
+
+//     wynik = l1 / l2;
+//   } else if (dzial === "*") {
+//     wynik = l1 * l2;
+//   } else {
+//     return "Niepoprawny parametr. Użyj: +, -, / lub *.";
+//   }
+
+//   return wynik;
+// }
+
+// const wynikDzialania = oblicz(l1, l2, dzial);
+// alert(`Wynik działania to: ${wynikDzialania}`);
+
+// this
+// const user = {
+//   imie: "Ala",
+//   wiek: 30,
+//   hobby: ["szachy", "kolorowanie", "bieganie"],
+//   wypiszHobby: function () {
+//     this.hobby.forEach((hobby) => {
+//       console.log(`${this.imie} interesuje sie ${hobby}`);
+//     });
+//   },
+// };
+
+// user.imie = "Marta";
+// user.wypiszHobby();
+
+// Zrobić obiekt user, będzie mieć w sobie klucze imie, wiek, pieniadze
+// oraz metody przywitajSie - komunikat z imieniem
+// czyDorosly - zwraca informacje czy osoba jest dorosla
+// czyMnieStac - metoda przyjoje parametr kwota, i daje informacje czy osoba ma tyle pieniedzy
+
+// const user = {
+//   imie: "Marzena",
+//   wiek: 26,
+//   pieniadze: 1500,
+//   przywitajSie() {
+//     console.log(`Cześć, jestem ${this.imie}`);
+//   },
+//   czyDorosly() {
+//     return this.wiek >= 18;
+//   },
+//   czyMnieStac(kwota) {
+//     if (this.pieniadze >= kwota) {
+//       return `Tak, stać mnie na to, żeby wydać ${kwota} zł`;
+//     } else {
+//       return `Nie, nie stać mnie na to, żeby wydać ${kwota} zł`;
+//     }
+//   },
+// };
+
+// user.przywitajSie();
+// console.log("Czy dorosły?", user.czyDorosly());
+// console.log(user.czyMnieStac(2000));
+// console.log(user.czyMnieStac(100));
+
+const user = {
+  imie: "Ola",
+  wiek: 25,
+  pieniądze: 500,
+  przywitajSie: function () {
+    alert(`${this.imie}`);
+  },
+  czyDorosly: function () {
+    return this.wiek >= 18;
+  },
+  czyMnieStac: function (kwota) {
+    return this.pieniądze >= kwota;
+  },
+};
+
+// TODO: NA KONIEC POWIEDZIEC O UTRACIE KONTEKSTU
+
+// user.przywitajSie();
+// console.log(user.czyDorosly());
+// console.log(user.czyMnieStac(400));
+
+// class
+class User {
+  constructor(imie, wiek, pieniadze) {
+    this.imie = imie;
+
+    this.wiek = wiek;
+
+    this.pieniadze = pieniadze;
+
+    // console.log(`Hej, powstalem, jest ${imie}, dodatkowa mam ${wiek} id odlozone ${pienadze} zł.`);
+  }
+
+  przywitajSie() {
+    console.log(`Czesc, jestem ${this.imie}`);
+  }
+
+  czyDorosly() {
+    if (this.wiek >= 18) {
+      console.log("tak, dorsly");
+
+      return true;
+    } else {
+      console.log("Nie, nie dorosly");
+
+      return false;
+    }
+  }
+
+  czyMnieStac(kwota) {
+    if (this.pieniadze >= kwota) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  kup(kwota) {
+    if (this.czyMnieStac(kwota)) {
+      console.log("Stac mnie");
+
+      this.pieniadze = this.pieniadze - kwota;
+
+      console.log(`Zostalo ci ${this.pieniadze}`);
+    } else {
+      console.log("Nie stac mnie");
+    }
+  }
+
+  wyplata(kwota) {
+    if (this.czyDorosly()) {
+      this.pieniadze = this.pieniadze + kwota * 0.88;
+    } else {
+      this.pieniadze = this.pieniadze + kwota;
+    }
+
+    console.log(`Masz teraz ${this.pieniadze}`);
+  }
+}
+
+const user0 = {
+  imie: "Ola",
+
+  wiek: 25,
+
+  pieniadze: 500,
+};
+
+const user1 = new User("Marek", 30, 6500);
+
+const user2 = new User("Ola", 23, 2000);
+
+console.log(user0);
+
+console.log(user1);
+
+console.log(user2);
+
+user1.kup(500);
+
+user1.wyplata(1000);
+
+// console.log(user1);
+// console.log(user2);

@@ -65,3 +65,37 @@ const users = [
 
 //   console.log("Chodź na piwo", name);
 // }
+
+// Zadanie 2 --- Mini system logowania
+// const login = prompt("Podaj login:");
+
+// switch (login) {
+//   case "admin":
+//     console.log("Witaj admin");
+//     break;
+
+//   case "user":
+//     console.log("Witaj użytkowniku");
+
+//     break;
+
+//   default:
+//     console.log("Nieznany użytkownik");
+// }
+
+// Zadanie 3 --- Przetwarzanie tekstu
+// const message = "Hello JavaScript World";
+// console.log(message);
+
+// const naTablice = message.split(" ");
+// console.log(naTablice.join("=ala="));
+
+// console.log(naTablice);
+
+// console.log(naTablice.length);
+
+// console.log(message.toUpperCase());
+
+// console.log(message.charAt(6));
+
+// console.log(naTablice.reverse());
