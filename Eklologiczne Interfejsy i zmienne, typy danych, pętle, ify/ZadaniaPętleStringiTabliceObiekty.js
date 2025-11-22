@@ -99,3 +99,41 @@ const users = [
 // console.log(message.charAt(6));
 
 // console.log(naTablice.reverse());
+
+// Zadanie 3 --- Przetwarzanie tekstu - bez reverse
+// const message = "Hello JavaScript World";
+
+// const oryginalna = message.split(" ");
+
+// const odwrocona = [];
+
+// for (let i = oryginalna.length - 1; i >= 0; i--) {
+//   odwrocona.push(oryginalna[i]);
+// }
+
+// console.log(odwrocona);
+
+// ____________
+// const message = "Hello JavaScript World";
+
+// console.log(message);
+
+// const naTablice = message.split(" ");
+
+// console.log(naTablice);
+
+// console.log(naTablice.length);
+
+// console.log(message.toUpperCase());
+
+// console.log(message.charAt(6));
+
+// console.log(naTablice.reverse());
+
+/////////////
+
+// zrobic inny sposob niz reverse
+
+// for (let i = naTablice.length - 1; i >= 0; i--) {
+//   console.log(naTablice[i]);
+// }
