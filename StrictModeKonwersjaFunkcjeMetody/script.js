@@ -236,12 +236,14 @@ const user = {
 
 // class
 class User {
-  constructor(imie, wiek, pieniadze) {
+  constructor(imie, wiek, pieniadze, kwotaKredytu) {
     this.imie = imie;
 
     this.wiek = wiek;
 
     this.pieniadze = pieniadze;
+
+    this.kwotaKredytu = kwotaKredytu;
 
     // console.log(`Hej, powstalem, jest ${imie}, dodatkowa mam ${wiek} id odlozone ${pienadze} zł.`);
   }
@@ -291,6 +293,68 @@ class User {
 
     console.log(`Masz teraz ${this.pieniadze}`);
   }
+
+  kredytSplataRaty(kwota = 0) {
+    if (this.czyMnieStac(kwota)) {
+      this.pieniadze = this.pieniadze - kwota;
+      this.kwotaKredytu = this.kwotaKredytu - kwota;
+
+      console.log(
+        `${this.imie} po spłacie tej raty kredytu bedzie miał/a ${this.pieniadze}`
+      );
+    } else {
+      console.log(
+        `${this.imie} nie posiada wystarczajacych srodkow aby splacic rate kredytu.`
+      );
+    }
+  }
+
+  wysokoscKredytu() {
+    if (this.czyDorosly()) {
+      console.log(
+        `${this.imie} do spłaty kredytu zostało Ci ${this.kwotaKredytu}`
+      );
+    } else {
+      console.log(`${this.imie} nie może mieć kredytu.`);
+    }
+  }
+
+  losowanie() {
+    const wylosujZPrzedzialu = (min, max) => {
+      return Math.floor(Math.random() * (max - min + 1)) + min;
+    };
+
+    const liczba = wylosujZPrzedzialu(1, 100);
+    const kosztLosu = 10;
+
+    if (this.pieniadze - kosztLosu < 0) {
+      console.log("Nie masz wystarczająco pieniędzy, aby zagrać.");
+      return;
+    }
+
+    this.pieniadze -= kosztLosu;
+
+    if (liczba > 80) {
+      console.log("WIELKA WYGRANA");
+      this.pieniadze += 10000;
+      console.log(`Masz teraz ${this.pieniadze} zł`);
+    } else {
+      console.log("NIE WYGRANA, SPRÓBUJ JESZCZE RAZ");
+    }
+  }
+
+  stanKonta() {
+    console.log(`Aktualny stan konta: ${this.pieniadze} PLN`);
+  }
+
+  urodziny() {
+    this.wiek++;
+    this.pieniadze = this.pieniadze + this.wiek * 100;
+
+    console.log(
+      `Wszystkiego najlepszego z okazji ${this.wiek}-tych urodzin, ${this.imie}!`
+    );
+  }
 }
 
 const user0 = {
@@ -301,19 +365,37 @@ const user0 = {
   pieniadze: 500,
 };
 
-const user1 = new User("Marek", 30, 6500);
+const user1 = new User("Marek", 30, 6500, 10000);
 
-const user2 = new User("Ola", 23, 2000);
+const user2 = new User("Ola", 23, 2000, 20000);
 
-console.log(user0);
+// console.log(user0);
 
-console.log(user1);
+// console.log(user1);
 
-console.log(user2);
+// console.log(user2);
 
-user1.kup(500);
+// user1.kup(500);
 
-user1.wyplata(1000);
+// user1.wyplata(1000);
+
+// user1.wysokoscKredytu();
+// user1.kredytSplataRaty(2000);
+// user1.wysokoscKredytu();
+
+// user1.losowanie();
+
+user1.stanKonta();
+
+user1.urodziny();
+
+user1.stanKonta();
 
 // console.log(user1);
 // console.log(user2);
+
+//
+// console.log(Math.round(3.3));
+// console.log(Math.floor(3.9));
+// console.log(Math.ceil(3.9));
+// console.log(Number(3.2383).toFixed(3));
