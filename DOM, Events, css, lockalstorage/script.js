@@ -142,6 +142,22 @@ colorButtons.forEach((button) => {
   });
 });
 
+// window.addEventListener("load", () => {
+//   colorButtons.forEach((button) => {
+//     const color = button.getAttribute("data-color");
+
+//     const spanWPrzycisku = button.querySelector("span");
+
+//     const nowaWartosc = localStorage.getItem(color);
+
+//     if (nowaWartosc > 0) {
+//       spanWPrzycisku.textContent = nowaWartosc;
+//     } else {
+//       spanWPrzycisku.textContent = 0;
+//     }
+//   });
+// });
+
 // _____________________________________________________________________________________
 
 // TODO: przy ladowaniu strony sprawdzic czy w localStorage sa wartosci dla kolorow
